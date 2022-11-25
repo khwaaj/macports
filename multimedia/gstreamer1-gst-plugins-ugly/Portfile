@@ -1,0 +1,71 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem                  1.0
+PortGroup                   meson 1.0
+
+# https://bugzilla.gnome.org/show_bug.cgi?id=636134
+PortGroup                   muniversal 1.0
+
+name                        gstreamer1-gst-plugins-ugly
+set my_name                 gst-plugins-ugly
+# please only commit stable updates (even numbered releases)
+version                     1.20.4
+description                 A set of good-quality plug-ins for GStreamer that might pose distribution \
+                            problems.
+long_description            GStreamer Ugly Plug-ins is a set of plug-ins that have good quality and \
+                            correct functionality, but distributing them might pose problems. The \
+                            license on either the plug-ins or the supporting libraries might not be how \
+                            we'd like. The code might be widely known to present patent problems.
+maintainers                 nomaintainer
+categories                  multimedia
+license                     GPL-2+ LGPL-2+
+homepage                    https://gstreamer.freedesktop.org/modules/${my_name}.html
+distname                    ${my_name}-${version}
+use_xz                      yes
+
+master_sites                https://gstreamer.freedesktop.org/src/${my_name}/
+
+checksums                   rmd160  d82d98fe3c648eef82408b7ae69360634cc95477 \
+                            sha256  5c9ec6bab96517e438b3f9bae0ceb84d3436f3da9bbe180cf4d28e32a7251b59 \
+                            size    511484
+
+depends_build-append        port:pkgconfig
+
+depends_lib                 port:gstreamer1-gst-plugins-base \
+                            port:libmpeg2 \
+                            port:x264
+
+# https://github.com/mesonbuild/meson/issues/1889
+compiler.cxx_standard       2014
+
+# Feature options for plugins without external deps
+configure.args-append       -Dasfdemux=enabled \
+                            -Ddvdlpcmdec=enabled \
+                            -Ddvdsub=disabled \
+                            -Drealmedia=enabled \
+                            -Dxingmux=enabled
+
+# Feature options for plugins that need external deps
+configure.args-append       -Da52dec=disabled \
+                            -Damrnb=disabled \
+                            -Damrwbdec=disabled \
+                            -Dcdio=disabled \
+                            -Ddvdread=disabled \
+                            -Dmpeg2dec=enabled \
+                            -Dsidplay=disabled \
+                            -Dx264=enabled
+
+# License-related feature options
+configure.args-append       -Dgpl=enabled
+
+# Common feature options
+configure.args-append       -Dnls=enabled \
+                            -Dorc=enabled \
+                            -Dtests=disabled \
+                            -Dgobject-cast-checks=disabled \
+                            -Dglib-asserts=disabled \
+                            -Dglib-checks=disabled
+
+livecheck.type              regex
+livecheck.url               ${master_sites}
+livecheck.regex             "${my_name}-(\\d+\\\.\\d*\[02468\](?:\\.\\d+)*)${extract.suffix}"
