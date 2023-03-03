@@ -85,10 +85,8 @@ configure.args-append       -Dfbdev=disabled \
                             -Dgobject-cast-checks=disabled \
                             -Dglib-asserts=disabled \
                             -Dglib-checks=disabled \
-                            -Dnls=disabled
-
-# applemedia isn't currently compiling
-configure.args-append -Dapplemedia=disabled
+                            -Dnls=disabled \
+                            -Dapplemedia=enabled
 
 # srtp media isn't currently compiling
 configure.args-append -Dsrtp=disabled
