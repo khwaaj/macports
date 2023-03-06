@@ -9,7 +9,7 @@ PortGroup                   muniversal 1.0
 name                        gstreamer1-gst-plugins-base
 set my_name                 gst-plugins-base
 # please only commit stable updates (even numbered releases)
-version                     1.20.4
+version                     1.22.1
 description                 This is gst-plugins, a set of plug-ins for GStreamer.
 long_description            ${description}
 maintainers                 nomaintainer
@@ -21,9 +21,9 @@ use_xz                      yes
 
 master_sites                https://gstreamer.freedesktop.org/src/${my_name}/
 
-checksums                   rmd160  5e42b919690587ee2bf1f55f8487d3b57c3a5e3f \
-                            sha256  8d181b7abe4caf23ee9f9ec5b4d3e232640452464e39495bfffb6d776fc97225 \
-                            size    3307224
+checksums                   rmd160  792e92836e719932e7fae466e6a213fc1dfed48b \
+                            sha256  59bcaeacc5646b8dbdcfa4ef20ca6e818dd234910efb4cee1bbea441a3801c69 \
+                            size    2347340
 
 depends_build-append        port:pkgconfig
 
@@ -62,9 +62,8 @@ configure.args-append       -Dadder=enabled \
                             -Dsubparse=enabled \
                             -Dtcp=disabled \
                             -Dtypefind=enabled \
-                            -Dvideoconvert=enabled \
+                            -Dvideoconvertscale=enabled \
                             -Dvideorate=enabled \
-                            -Dvideoscale=enabled \
                             -Dvideotestsrc=enabled \
                             -Dvolume=enabled
 

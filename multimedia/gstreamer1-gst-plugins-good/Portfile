@@ -9,7 +9,7 @@ PortGroup                   muniversal 1.0
 name                        gstreamer1-gst-plugins-good
 set my_name                 gst-plugins-good
 # please only commit stable updates (even numbered releases)
-version                     1.20.4
+version                     1.22.1
 description                 A set of good-quality plug-ins for GStreamer under GStreamer's preferred \
                             license, LGPL.
 long_description            GStreamer Good Plug-ins is a set of plug-ins that GStreamer's developers \
@@ -25,9 +25,9 @@ use_xz                      yes
 
 master_sites                https://gstreamer.freedesktop.org/src/${my_name}/
 
-checksums                   rmd160  d16a8b9c6eb01f4f3a0add3c9dee7293233afa71 \
-                            sha256  b16130fbe632fa8547c2147a0ef575b0140fb521065c5cb121c72ddbd23b64da \
-                            size    3424532
+checksums                   rmd160  d0a0c2e595b4afa51404cd3989a407039f642c39 \
+                            sha256  44f9104654b4fd042aebe90932ab92e7ff7d8460fbc05b23dad87dffe70974cc \
+                            size    2801544
 
 depends_build-append        port:pkgconfig
 
@@ -94,7 +94,8 @@ configure.args-append       -Dalpha=enabled \
                             -Dvideocrop=enabled \
                             -Dvideomixer=enabled \
                             -Dwavenc=enabled \
-                            -Dy4m=enabled
+                            -Dy4m=enabled \
+                            -Dxingmux=enabled
 
 # Feature options for plugins with external deps
 configure.args-append       -Daalib=enabled \
