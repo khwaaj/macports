@@ -28,6 +28,7 @@ checksums                   rmd160  5e42b919690587ee2bf1f55f8487d3b57c3a5e3f \
 depends_build-append        port:pkgconfig
 
 depends_lib-append          port:gstreamer1 \
+                            port:pango \
                             port:graphene \
                             port:orc \
                             port:libogg \
@@ -73,7 +74,7 @@ configure.args-append       -Dalsa=disabled \
                             -Dlibvisual=disabled \
                             -Dogg=enabled \
                             -Dopus=disabled \
-                            -Dpango=disabled \
+                            -Dpango=enabled \
                             -Dtheora=disabled \
                             -Dtremor=disabled \
                             -Dvorbis=disabled \
