@@ -56,10 +56,10 @@ configure.args-append       -Dexamples=disabled \
                             -Dtools=enabled \
                             -Dnls=disabled \
                             -Dintrospection=disabled \
-                            -Dgobject-cast-checks=disabled \
-                            -Dglib-asserts=disabled \
-                            -Dglib-checks=disabled \
-                            -Dextra-checks=disabled
+                            -Dgobject-cast-checks=enabled \
+                            -Dglib-asserts=enabled \
+                            -Dglib-checks=enabled \
+                            -Dextra-checks=enabled
 
 test.run                    yes
 test.target                 check

@@ -84,13 +84,13 @@ configure.args-append       -Dalsa=disabled \
 # Common feature options
 configure.args-append       -Dexamples=disabled \
                             -Dtests=disabled \
-                            -Dtools=disabled \
+                            -Dtools=enabled \
                             -Dintrospection=disabled \
                             -Dnls=disabled \
                             -Dorc=enabled \
-                            -Dgobject-cast-checks=disabled \
-                            -Dglib-asserts=disabled \
-                            -Dglib-checks=disabled
+                            -Dgobject-cast-checks=enabled \
+                            -Dglib-asserts=enabled \
+                            -Dglib-checks=enabled
 
 test.run                    yes
 test.target                 check
