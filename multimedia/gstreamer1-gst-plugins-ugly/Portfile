@@ -9,7 +9,7 @@ PortGroup                   muniversal 1.0
 name                        gstreamer1-gst-plugins-ugly
 set my_name                 gst-plugins-ugly
 # please only commit stable updates (even numbered releases)
-version                     1.24.3
+version                     1.24.6
 description                 A set of good-quality plug-ins for GStreamer that might pose distribution \
                             problems.
 long_description            GStreamer Ugly Plug-ins is a set of plug-ins that have good quality and \
@@ -25,9 +25,9 @@ use_xz                      yes
 
 master_sites                https://gstreamer.freedesktop.org/src/${my_name}/
 
-checksums                   rmd160  8c5f93f776c2cc83b4cce3ed4fd29cd65d64c9a8 \
-                            sha256  4c951341c4c648630b6fe1234ec113d81dd2d248529bf2b5478e0ad077c80ed3 \
-                            size    220860
+checksums                   rmd160  be044837f7c82c9f1e64bfb3aa6ab717ab8418d2 \
+                            sha256  5dfdbb2978ab282e637255cd875cf5b7b93fc83db62f8a0b1af02c85c84a75c4 \
+                            size    225188
 
 depends_build-append        port:pkgconfig
 
