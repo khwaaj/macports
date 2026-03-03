@@ -9,7 +9,7 @@ PortGroup                   muniversal 1.0
 name                        gstreamer1-gst-plugins-base
 set my_name                 gst-plugins-base
 # please only commit stable updates (even numbered releases)
-version                     1.24.6
+version                     1.26.8
 description                 This is gst-plugins, a set of plug-ins for GStreamer.
 long_description            ${description}
 maintainers                 nomaintainer
@@ -21,9 +21,9 @@ use_xz                      yes
 
 master_sites                https://gstreamer.freedesktop.org/src/${my_name}/
 
-checksums                   rmd160  6731665439bf3747c2b98378fdf6e368f922d017 \
-                            sha256  cf52b535a0ce7ec974756891818f34f06317c2e136abb24149e18c23ecc229b5 \
-                            size    2436400
+checksums                   rmd160  8be20a6a89201224caf631384ffd9e74bc20280c \
+                            sha256  513cace4b02cb183ee47665d64bb2a25088abb6678c4cc57bb100b841add746b \
+                            size    2495784
 
 depends_build-append        port:pkgconfig
 

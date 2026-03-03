@@ -9,7 +9,7 @@ PortGroup                   muniversal 1.0
 name                        gstreamer1-gst-plugins-good
 set my_name                 gst-plugins-good
 # please only commit stable updates (even numbered releases)
-version                     1.24.6
+version                     1.26.8
 description                 A set of good-quality plug-ins for GStreamer under GStreamer's preferred \
                             license, LGPL.
 long_description            GStreamer Good Plug-ins is a set of plug-ins that GStreamer's developers \
@@ -25,9 +25,9 @@ use_xz                      yes
 
 master_sites                https://gstreamer.freedesktop.org/src/${my_name}/
 
-checksums                   rmd160  a1e0ffdff0ffa678f65618f12b9324d60844c7b0 \
-                            sha256  996b9c8d1d246ed43be304718b6086e5a17d4ae8114d1920aed9ea75b920ba2d \
-                            size    2919844
+checksums                   rmd160  67e463e665c87b72f8102cc03280189809cc150c \
+                            sha256  061e84efae31dfb4d96e4517659aca82bad9d5625b8f64d3290604385edd1d14 \
+                            size    3004580
 
 depends_build-append        port:pkgconfig
 
