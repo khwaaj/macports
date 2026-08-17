@@ -9,7 +9,7 @@ PortGroup                   muniversal 1.0
 name                        gstreamer1-gst-plugins-bad
 set my_name                 gst-plugins-bad
 # please only commit stable updates (even numbered releases)
-version                     1.26.8
+version                     1.26.11
 description                 A set of plug-ins for GStreamer that need more quality.
 long_description            GStreamer Bad Plug-ins is a set of plug-ins that aren't up to par compared \
                             to the rest. They might be close to being good quality, but they're missing \
@@ -24,9 +24,9 @@ use_xz                      yes
 
 master_sites                https://gstreamer.freedesktop.org/src/${my_name}/
 
-checksums                   rmd160  8fdf2ae2966fe59d8ff4d74305f41e2dc98f5c55 \
-                            sha256  25c05be5eb0694bde3ecd3317516f5d0d6e4ad21125a5ebcf6fb644a4c92439f \
-                            size    7784944
+checksums                   rmd160  f327db391106c39469fdf55c77e0ad528af859c1 \
+                            sha256  110fb82795f0e569b1e27b12ab9699d35c7762e1ff4db95335d6ac8d1442af3d \
+                            size    7798064
 
 depends_build-append        port:gettext \
                             port:pkgconfig
